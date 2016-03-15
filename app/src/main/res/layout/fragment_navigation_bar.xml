@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/green" >
+
+    <TextView
+        android:id="@+id/navigationBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:textColor="#6a6a6a"
+        android:drawableLeft="@drawable/nav_back"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/navigationBarMenu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/action_bar_sliding_menu" />
+
+    
+    <ImageView
+        android:id="@+id/navigationBarCart"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/navigationBarSearch"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/action_bar_shopping_list"
+        android:visibility="gone" />
+
+      <ImageView
+          android:id="@+id/navigationBarFilter"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_toLeftOf="@+id/navigationBarSearch"
+          android:layout_centerVertical="true"
+          android:scaleType="centerCrop"
+          android:src="@drawable/filter"
+          android:visibility="gone" />
+
+      <ImageView
+          android:id="@+id/navigationBarSearch"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/action_bar_search"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentEnd="true" />
+
+
+    <ImageView
+        android:id="@+id/navigationBarRefresh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/action_bar_shop_again"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/navigationBarSearch"
+        android:layout_toStartOf="@+id/navigationBarSearch" />
+
+      <TextView
+          android:id="@+id/navigationBarTitle"
+          android:layout_width="wrap_content"
+          android:layout_height="50dp"
+          android:layout_centerInParent="true"
+          android:gravity="center"
+          android:textColor="#FFFFFF"
+          android:textSize="20sp" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0.5dp"
+          android:layout_alignParentBottom="true"
+          android:background="@color/green"
+          android:id="@+id/linearLayout"
+          android:orientation="horizontal">
+      </LinearLayout>
+
+      <Spinner
+          android:id="@+id/filterSpinner"
+          android:layout_width="0dp"
+          android:layout_height="0dp"
+          />
+
+  </RelativeLayout>

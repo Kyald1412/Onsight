@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Onsight - Indonesia</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="main_courses">Tokoh</string>
+    <string name="appetizers">Fauna</string>
+    <string name="soups">Soups</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="desserts">Desserts</string>
+    <string name="time_savers">Time-savers</string>
+    <string name="favorites">Favorites</string>
+    <string name="recipes">Recipes</string>
+    <string name="share_success">The article was shared successfully to your timeline</string>
+    <string name="no_internet_connectivity">You are not currently connected to any networks. Please connect your device to any network to get the latest content available.</string>
+    <string name="internet_connectivity">internet SUCCESS</string>
+    
+    <!-- Admob id -->
+    <string name="admob_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+    
+    <!-- Twitter -->
+    <string name="consumer_key">cOabV0Sro1cqOIhx7oBcg</string>
+    <string name="consumer_secret">U6Wde9h5BLvMop54ROEWoZawBRVsHfE74Q7vSP6Cc</string>
+    
+    <!-- Facebook -->
+    <string name="applicationId">729770857065264</string>
+
+</resources>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FF0000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/about_fragment_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/about_fragment_blog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="24sp"
+                android:text="Testing"
+                android:textAlignment="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/about_fragment_blog_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:gravity="center_vertical|center"
+                android:text="asduyadsguyadgasbdiasdbiuasdiuashdiabsdusbdi dasgiasd iasd uihaduihasiud hia hdsiu hasdi " />
+
+            <TextView
+                android:id="@+id/about_fragment_blog_mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:text="adasdasdasdasdasdasdasdsad asdasd asd asd as"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/about_fragment_blog_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="dkjashdiusa iuadh iuadhiuhad iu ahdiha diu hiuasd i hdashdihasuiihasdi adsh" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/about_fragment_social"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:background="@color/white"
+            android:layout_below="@+id/about_fragment_info"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/judul"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
+                android:hint="Soekarno, Rendang, Taman Jomblo, dll..."
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cat"
+                android:layout_below="@+id/textView4"
+                android:layout_alignLeft="@+id/judul"
+                android:layout_alignStart="@+id/judul"
+                android:layout_alignRight="@+id/judul"
+                android:layout_alignEnd="@+id/judul"
+                android:hint="Tokoh, Tempat Wisata, dll"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/desc"
+                android:lines="5"
+                android:layout_below="@+id/textView5"
+                android:layout_alignRight="@+id/cat"
+                android:layout_alignEnd="@+id/cat"
+                android:layout_alignLeft="@+id/cat"
+                android:layout_alignStart="@+id/cat"
+                android:hint="Ulasanmu..."
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:id="@+id/limit4"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/green"
+                android:layout_below="@+id/textView6"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nama"
+                android:layout_below="@+id/textView6"
+                android:layout_alignRight="@+id/desc"
+                android:layout_alignEnd="@+id/desc"
+                android:layout_alignLeft="@+id/desc"
+                android:layout_alignStart="@+id/desc"
+                android:hint="Sukirman, Sudjiman, dll"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Silahkan isi form dibawah ini"
+                android:id="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/red" />
+
+            <View
+                android:id="@+id/limit3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/red"
+                android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Nama tokoh/tempat/makanan/judul..."
+                android:id="@+id/textView3"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/red"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Kategori"
+                android:id="@+id/textView4"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/judul"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/red"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Deskripsi"
+                android:id="@+id/textView5"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/cat"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/red"
+                android:layout_marginBottom="10dp" />
+
+            <View
+                android:id="@+id/limit2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/green"
+                android:layout_below="@+id/textView4"
+                android:layout_alignLeft="@+id/limit3"
+                android:layout_alignStart="@+id/limit3"
+                android:layout_marginRight="60dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Nama Kamu"
+                android:id="@+id/textView6"
+                android:layout_below="@+id/desc"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/red"
+                android:layout_marginBottom="10dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/button"
+                android:layout_below="@+id/btnFile"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah gambar"
+                android:id="@+id/btnFile"
+                android:layout_below="@+id/nama"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:background="@color/red"
+                android:textColor="@color/white"
+                android:layout_toLeftOf="@+id/textView5"
+                android:layout_toStartOf="@+id/textView5"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp" />
+            <View
+                android:id="@+id/limit1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/green"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="60dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="no image"
+                android:id="@+id/real_uri"
+                android:layout_alignBaseline="@+id/btnFile"
+                android:layout_alignBottom="@+id/btnFile"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_alignStart="@+id/textView3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/about_txt_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/text_uri"
+                android:layout_alignBottom="@+id/btnFile"
+                android:layout_alignLeft="@+id/real_uri"
+                android:layout_alignStart="@+id/real_uri"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/about_fragment_dilimiter_below_social"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/about_fragment_social"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/green" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@id/about_fragment_social"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/green"
+            android:paddingTop="20dp" />
+
+        <TextView
+            android:id="@+id/about_fragment_version_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom|center_horizontal"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:text="Version 1.0.0 / 06.03.2016"
+            android:textSize="12sp"
+            android:layout_below="@+id/about_fragment_social"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+</ScrollView>

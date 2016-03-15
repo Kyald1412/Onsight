@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="1.0" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/xxx">
+
+        <ImageView
+            android:id="@+id/list_item_single_main_image"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:maxHeight="50dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pic_samon" />
+
+        <TextView
+            android:id="@+id/list_item_single_recipe_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/listview_title_height"
+            android:layout_alignBottom="@id/list_item_single_main_image"
+            android:background="@color/half_transparent"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:minHeight="30dp"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="Smoked samon canapes"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/listview_title_fontsize" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/listview_cookit_button_height"
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/cook_it_butt"
+            android:layout_alignTop="@+id/list_item_single_recipe_title"
+            android:layout_marginLeft="300dp"
+            android:layout_marginStart="265dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/list_item_single_main_image"
+            android:visibility="gone"
+            android:id="@+id/imageView1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@+id/list_item_single_recipe_title"
+            android:layout_alignBottom="@+id/list_item_single_main_image"
+            android:background="#c8ff0000"
+            android:id="@+id/imageView"
+            android:layout_toEndOf="@+id/imageView1"
+            android:layout_marginLeft="300dp"
+            android:layout_marginStart="300dp"
+            android:layout_toRightOf="@+id/imageView1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Details"
+                android:id="@+id/textView"
+                android:textColor="#FFFFFF"
+                android:password="false"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="185dp"
+        android:layout_weight="0.3"
+        android:background="@android:color/white"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/list_item_single_place"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@drawable/pin"
+            android:drawablePadding="2dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="Italy"
+            android:textColor="#6a6a6a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/list_item_single_prep_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:drawableLeft="@drawable/prep_time"
+            android:drawablePadding="2dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="50min"
+            android:textColor="#6a6a6a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/list_item_single_cook_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:drawableLeft="@drawable/cook_time"
+            android:drawablePadding="2dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:minHeight="20dp"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="20min"
+            android:textColor="#6a6a6a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/list_item_single_calories"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:drawableLeft="@drawable/calories"
+            android:drawablePadding="2dp"
+            android:padding="2dp"
+            android:singleLine="true"
+            android:text="653 kcal"
+            android:textColor="#6a6a6a"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

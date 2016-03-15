@@ -1,0 +1,5 @@
+<resources>
+    <string name="ptr_pull_to_refresh">Puxe para baixo para atualizar</string>
+    <string name="ptr_release_to_refresh">Solte para atualizar</string>
+    <string name="ptr_refreshing">Carregando...</string>
+</resources>
