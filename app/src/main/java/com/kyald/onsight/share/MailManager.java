@@ -24,6 +24,8 @@ public class MailManager {
 	public static void openMailIntent(Context c, String subject, String content) {
 		Intent mailIntent = new Intent(Intent.ACTION_SEND);
 
+		mailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
 		mailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
 		mailIntent.putExtra(Intent.EXTRA_TEXT, content);
 		mailIntent.setType("plain/text");

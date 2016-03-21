@@ -1,6 +1,5 @@
 package com.kyald.onsight;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,10 +46,10 @@ import com.kyald.onsight.models.Category;
 import com.kyald.onsight.models.DrawerListMenuItem;
 import com.kyald.onsight.models.Recipe;
 import com.kyald.onsight.settings.AppConstants;
+import com.kyald.onsight.share.MailManager;
 import com.kyald.onsight.utils.CommonUtils;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.kyald.onsight.utils.RecipesXMLTagConstants;
 import com.nostra13.universalimageloader.cache.disc.naming.HashCodeFileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -67,8 +66,9 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
  */
 public class MainActivity extends FragmentActivity {
 
-	private static final String ABOUT = "About Page";
+	private static final String ABOUT = "About";
 	private static final String SUBMIT = "Tambah ulasanmu";
+	private static final String SHARE = "Share this app";
 
 	// Key for favorite recipes
 	public static final String KEY_FAV_RECIPES = "key_fav_recipes";
@@ -92,6 +92,7 @@ public class MainActivity extends FragmentActivity {
 
 	private DrawerListMenuAdapter mDrawerAdapter;
 
+
 	private ArrayList<DrawerListMenuItem> mMenuItems;
 
 	/**
@@ -104,6 +105,7 @@ public class MainActivity extends FragmentActivity {
 	 */
 
 	private AdView admobView;
+
 	
 	/**
 	 * Returns the Admob view
@@ -148,6 +150,7 @@ public class MainActivity extends FragmentActivity {
 		createLeftMenu();
 
 		showSplash();
+
 
 		admobView = (AdView) findViewById(R.id.home_screen_admob);
 
@@ -209,8 +212,11 @@ public class MainActivity extends FragmentActivity {
 		DrawerListMenuItem logoMenuItem = new DrawerListMenuItem("", false, "",
 				true);
 		logoMenuItem.setLogo(true);
+
+
 		mMenuItems.add(logoMenuItem);
 
+		/*
 		for (int i = 0; i < categories.size(); i++) {
 			if (categories.get(i).getRecipes().size() > 0) {
 				mMenuItems.add(new DrawerListMenuItem(categories.get(i)
@@ -218,11 +224,17 @@ public class MainActivity extends FragmentActivity {
 			}
 		}
 
+		*/
+
 		mMenuItems.add(new DrawerListMenuItem(AppConstants.CATEGORY_FAVORITE, false, "fav",
 				true));
 		
 		// About Page Creation
 		mMenuItems.add(new DrawerListMenuItem(SUBMIT, false, "submit2",
+				true));
+
+		// About Page Creation
+		mMenuItems.add(new DrawerListMenuItem(SHARE, false, "share_icon_active",
 				true));
 
 		mMenuItems.add(new DrawerListMenuItem(ABOUT, false, "about",
@@ -263,6 +275,12 @@ public class MainActivity extends FragmentActivity {
 										mDrawerAdapter.notifyDataSetChanged();
 
 										showSubmit();
+									} else if (menuItem.getMenuItemName().equals(SHARE)) {
+										mDrawerAdapter.deselectAll();
+										menuItem.setMenuSelected(true);
+										mDrawerAdapter.notifyDataSetChanged();
+
+										showShare();
 									} else {
 										mDrawerAdapter.deselectAll();
 										menuItem.setMenuSelected(true);
@@ -299,6 +317,19 @@ public class MainActivity extends FragmentActivity {
 				});
 	}
 
+	private void showShare() {
+
+		MailManager.openMailIntent(this,"Test", getEmailBody());
+	}
+
+	private String getEmailBody() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Share this app:");
+		builder.append("\n\n");
+		builder.append("Download more Onsight at " + "http://play.google.com/store/apps/details?id=" + this.getPackageName());
+		return builder.toString();
+	}
+
 	/**
 	 * Shows the Splash Screen
 	 */
@@ -316,18 +347,17 @@ public class MainActivity extends FragmentActivity {
 
 				@Override
 				public void run() {
-					getSupportFragmentManager().popBackStack();
+//					getSupportFragmentManager().popBackStack();
 					showMainScreen();
 
-					/*if (AppConstants.ENABLE_ADMOB_HOME_PAGE) {
+					if (AppConstants.ENABLE_ADMOB_HOME_PAGE) {
 						admobView.setVisibility(View.VISIBLE);
 						admobView.setVisibility(View.VISIBLE);
 						AdRequest adRequest = new AdRequest.Builder().build();
 						admobView.loadAd(adRequest);
 					} else {
 						admobView.setVisibility(View.GONE);
-					}*/
-
+					}
 
 
 					if (mDrawerAdapter.getItem(0) != null) {
@@ -351,18 +381,18 @@ public class MainActivity extends FragmentActivity {
 
 				@Override
 				public void run() {
-					getSupportFragmentManager().popBackStack();
+			//		getSupportFragmentManager().popBackStack();
 					showMainScreen();
 
 
-					/*if (AppConstants.ENABLE_ADMOB_HOME_PAGE) {
+					if (AppConstants.ENABLE_ADMOB_HOME_PAGE) {
 						admobView.setVisibility(View.VISIBLE);
 						admobView.setVisibility(View.VISIBLE);
 						AdRequest adRequest = new AdRequest.Builder().build();
 						admobView.loadAd(adRequest);
 					} else {
 						admobView.setVisibility(View.GONE);
-					}*/
+					}
 
 
 
@@ -479,7 +509,7 @@ public class MainActivity extends FragmentActivity {
 		SubmitFragment screen = SubmitFragment.newInstance();
 
 		NavigationBarFragment navBar = NavigationBarFragment.newInstance(
-				(ApplicationContext) getApplicationContext(), SUBMIT, false, false, false, true, false);
+				(ApplicationContext) getApplicationContext(), SUBMIT, false, false, false, false, true);
 		navBar.setShowBack(true);
 		showScreen(navBar, screen, SubmitFragment.TAG, true);
 	}

@@ -334,7 +334,7 @@ public class NavigationBarFragment extends Fragment {
 	 * Shows the refresh button in the header
 	 */
 	private void showRefreshButton() {
-		mRefreshImage.setVisibility(View.VISIBLE);
+		mRefreshImage.setVisibility(View.INVISIBLE);
 	}
 	
 	/**

@@ -17,8 +17,8 @@
     <string name="internet_connectivity">internet SUCCESS</string>
     
     <!-- Admob id -->
-    <string name="admob_id">ca-app-pub-3940256099942544/6300978111</string>
-    <string name="admob_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_id">ca-app-pub-2095815524012784/7051689952</string>
+    <string name="admob_interstitial">ca-app-pub-2095815524012784/2165425550</string>
     
     <!-- Twitter -->
     <string name="consumer_key">cOabV0Sro1cqOIhx7oBcg</string>

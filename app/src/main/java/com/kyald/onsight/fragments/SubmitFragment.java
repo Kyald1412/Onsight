@@ -17,9 +17,12 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,7 +55,8 @@ public class SubmitFragment extends Fragment {
 
 
 	Button btnSelFile,btnSubmit;
-	TextView judul, category, description, name, txt_uri, real_uri;
+	TextView judul, category, description, name, txt_uri, real_uri, txtjdudul, txtdeskripsi, txtnama;
+	View dividerjudul, dividerdeskripsi, dividernama;
 	//String textMessage, textMessage1, textMessage2, textMessage3, textMessage4, str;
 	//ImageView image;
 
@@ -62,6 +66,10 @@ public class SubmitFragment extends Fragment {
 
 	private static final String username = "weeework.studio@gmail.com";
 	private static final String password = "spongebobsquarepants";
+
+
+	private Spinner spinner;
+	private static final String[]paths = {"- Pilih kategori -","Game", "Tokoh", "Tempat Wisata","Kuliner","Flora/Fauna","Lain-lain..."};
 
 
 
@@ -120,6 +128,13 @@ public class SubmitFragment extends Fragment {
 		txt_uri = (TextView) getView().findViewById(R.id.text_uri);
 		real_uri = (TextView) getView().findViewById(R.id.real_uri);
 
+		txtjdudul = (TextView) getView().findViewById(R.id.textView3); // nama tokoh/wisata/dll
+		txtdeskripsi = (TextView) getView().findViewById(R.id.textView5); // deskripsi
+		txtnama = (TextView) getView().findViewById(R.id.textView6); // nama kamu
+
+		dividerjudul = getView().findViewById(R.id.limit1);
+		dividerdeskripsi = getView().findViewById(R.id.limit3);
+		dividernama = getView().findViewById(R.id.limit4);
 
 		judul.addTextChangedListener(new TextWatcher() {
 			@Override
@@ -213,22 +228,132 @@ public class SubmitFragment extends Fragment {
 					String message3 = description.getText().toString();
 					String message4 = name.getText().toString();
 					sendMail(email, message1, message2, message3, message4);
-				}else{
+				} else {
 					Toast.makeText(getActivity(), "Please connect to any network available first.", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
 
-		btnSelFile.setOnClickListener(new View.OnClickListener(){
+		btnSelFile.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
 				Intent intent = new Intent(Intent.ACTION_PICK,
 						MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
 				startActivityForResult(intent, 0);
-			}});
+			}
+		});
 
 
+
+		spinner = (Spinner)getView().findViewById(R.id.spinner);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+				android.R.layout.simple_spinner_item,paths);
+
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinner.setAdapter(adapter);
+		spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+				switch (i) {
+					case 0:
+						//setviewenable();
+						setviewdisable();
+						category.setVisibility(View.INVISIBLE);
+						//category.setText("Game");
+						//txtjdudul.setHint("Judul Game");
+						break;
+					case 1:
+						setviewenable();
+						category.setVisibility(View.INVISIBLE);
+						category.setText("Game");
+						txtjdudul.setText("Judul Game");
+						judul.setHint("Dota, LOL, dll..");
+
+						break;
+					case 2:
+						setviewenable();
+						category.setVisibility(View.INVISIBLE);
+						category.setText("Tokoh");
+						txtjdudul.setText("Nama Tokoh");
+						judul.setHint("Soekarno, Hatta, dll..");
+						break;
+					case 3:
+						setviewenable();
+						category.setVisibility(View.INVISIBLE);
+						category.setText("Tempat Wisata");
+						judul.setHint("Taman jomblo, taman bunga, dll..");
+						txtjdudul.setText("Nama Tempat Wisata");
+						break;
+					case 4:
+						setviewenable();
+						category.setVisibility(View.INVISIBLE);
+						category.setText("Kuliner");
+						txtjdudul.setText("Nama Kuliner");
+						judul.setHint("Nasi goreng, es jeruk, dll...");
+						break;
+					case 5:
+						setviewenable();
+						category.setVisibility(View.INVISIBLE);
+						category.setText("Flora/Fauna");
+						txtjdudul.setText("Nama flora/fauna");
+						judul.setHint("Gajah, Anggrek, dll...");
+						break;
+					case 6:
+						setviewenable();
+						category.setVisibility(View.VISIBLE);
+						category.setText("");
+						txtjdudul.setText("Nama/Judul");
+						judul.setHint("");
+						break;
+
+				}
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> adapterView) {
+
+			}
+		});
+
+
+	}
+
+	private void setviewenable(){
+		judul.setVisibility(View.VISIBLE);
+		description.setVisibility(View.VISIBLE);
+		name.setVisibility(View.VISIBLE);
+
+		txtjdudul.setVisibility(View.VISIBLE);
+		txtdeskripsi.setVisibility(View.VISIBLE);
+		txtnama.setVisibility(View.VISIBLE);
+
+		dividerjudul.setVisibility(View.VISIBLE);
+		dividerdeskripsi.setVisibility(View.VISIBLE);
+		dividernama.setVisibility(View.VISIBLE);
+
+		real_uri.setVisibility(View.VISIBLE);
+		btnSelFile.setVisibility(View.VISIBLE);
+		btnSubmit.setVisibility(View.VISIBLE);
+	}
+
+	private void setviewdisable(){
+
+		judul.setVisibility(View.GONE);
+		description.setVisibility(View.GONE);
+		name.setVisibility(View.GONE);
+
+		txtjdudul.setVisibility(View.INVISIBLE);
+		txtdeskripsi.setVisibility(View.GONE);
+		txtnama.setVisibility(View.GONE);
+
+		dividerjudul.setVisibility(View.GONE);
+		dividerdeskripsi.setVisibility(View.INVISIBLE);
+		dividernama.setVisibility(View.GONE);
+
+		real_uri.setVisibility(View.INVISIBLE);
+		btnSelFile.setVisibility(View.INVISIBLE);
+		btnSubmit.setVisibility(View.GONE);
 	}
 
 

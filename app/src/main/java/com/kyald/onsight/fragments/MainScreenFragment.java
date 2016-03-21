@@ -42,7 +42,6 @@ public class MainScreenFragment extends Fragment {
 
 	private DisplayImageOptions mImageOptions;
 	private ArrayList<Category> mCategories;
-
 	/**
 	 * Constructor
 	 */
@@ -157,7 +156,7 @@ public class MainScreenFragment extends Fragment {
 
 		return view;
 	}
-	
+
 	/**
 	 * Fixes the categories used for the left menu
 	 * 

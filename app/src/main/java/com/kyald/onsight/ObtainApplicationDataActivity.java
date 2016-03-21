@@ -12,6 +12,7 @@ import android.content.res.AssetManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
@@ -46,20 +47,24 @@ public class ObtainApplicationDataActivity extends FragmentActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
 		setContentView(R.layout.activity_main);
-		
+
+
+
 		if (AppConstants.ENABLE_INTERSTITIAL_ADMOB) {
-			mInterstitialAd = new InterstitialAd(this);
-	        mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial));
-	        requestNewInterstitial();
-	        mInterstitialAd.setAdListener(new AdListener() {
-	        	@Override
-	        	public void onAdLoaded() {
-	        		super.onAdLoaded();
-	        		mInterstitialAd.show();
-	        	}
+			mInterstitialAd = new InterstitialAd(getApplicationContext());
+			mInterstitialAd.setAdUnitId(getString(R.string.admob_interstitial));
+			requestNewInterstitial();
+			mInterstitialAd.setAdListener(new AdListener() {
+				@Override
+				public void onAdLoaded() {
+					super.onAdLoaded();
+					mInterstitialAd.show();
+				}
 			});
 
 		}
+
+
 
 		RetrieveXMLData task = new RetrieveXMLData();
 		task.execute();
@@ -149,7 +154,7 @@ public class ObtainApplicationDataActivity extends FragmentActivity {
 			} 
 			
 			if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
-				mInterstitialAd.show();
+				//mInterstitialAd.show();
 			} else {
 				startMainActivity();
 			}
@@ -163,6 +168,9 @@ public class ObtainApplicationDataActivity extends FragmentActivity {
 		if (((ApplicationContext) getApplicationContext()).getParsedApplicationSettings() != null) {
 			Intent intent = new Intent(ObtainApplicationDataActivity.this,
 					MainActivity.class);
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+			}
 			startActivity(intent);
 			finish();
 		}
