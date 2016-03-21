@@ -68,6 +68,7 @@ import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
  */
 public class MainActivity extends FragmentActivity {
 
+	private static final String test = "test";
 	private static final String ABOUT = "About";
 	private static final String SUBMIT = "Tambah ulasanmu";
 	private static final String SHARE = "Share this app";
