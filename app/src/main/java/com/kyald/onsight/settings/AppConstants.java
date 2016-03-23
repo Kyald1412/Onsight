@@ -22,12 +22,12 @@ public class AppConstants {
 	/**
 	 * Enable or disable Admob in your Home screen
 	 */
-	public static final boolean ENABLE_ADMOB_HOME_PAGE = false;
+	public static final boolean ENABLE_ADMOB_HOME_PAGE = true;
 	
 	/**
 	 * Enable or disable interstitial Admob
 	 */
-	public static final boolean ENABLE_INTERSTITIAL_ADMOB = false;
+	public static final boolean ENABLE_INTERSTITIAL_ADMOB = true;
     
     /**
      * Enable or disable Facebook share by your choice.

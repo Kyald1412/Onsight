@@ -15,16 +15,17 @@
     <string name="share_success">The article was shared successfully to your timeline</string>
     <string name="no_internet_connectivity">You are not currently connected to any networks. Please connect your device to any network to get the latest content available.</string>
     <string name="internet_connectivity">internet SUCCESS</string>
-    
+
     <!-- Admob id -->
     <string name="admob_id">ca-app-pub-2095815524012784/7051689952</string>
     <string name="admob_interstitial">ca-app-pub-2095815524012784/2165425550</string>
-    
+
     <!-- Twitter -->
     <string name="consumer_key">cOabV0Sro1cqOIhx7oBcg</string>
     <string name="consumer_secret">U6Wde9h5BLvMop54ROEWoZawBRVsHfE74Q7vSP6Cc</string>
-    
+
     <!-- Facebook -->
     <string name="applicationId">729770857065264</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 </resources>

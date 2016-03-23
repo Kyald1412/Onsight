@@ -2,16 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#FF0000">
+    android:fillViewport="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/backrepeat"
-        android:orientation="vertical"
-        android:backgroundTintMode="multiply"
-        android:backgroundTint="@color/red">
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/about_fragment_info"
@@ -30,7 +27,9 @@
                 android:textSize="24sp"
                 android:text="Testing"
                 android:textAlignment="center"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
 
             <TextView
                 android:id="@+id/about_fragment_blog_url"
@@ -42,7 +41,9 @@
                 android:textAlignment="center"
                 android:gravity="center_vertical|center"
                 android:text="asduyadsguyadgasbdiasdbiuasdiuashdiabsdusbdi dasgiasd iasd uihaduihasiud hia hdsiu hasdi "
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
 
             <TextView
                 android:id="@+id/about_fragment_blog_mail"
@@ -53,7 +54,9 @@
                 android:textSize="14sp"
                 android:textAlignment="center"
                 android:text="adasdasdasdasdasdasdasdsad asdasd asd asd as"
-                android:gravity="center" />
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
 
             <TextView
                 android:id="@+id/about_fragment_blog_phone"
@@ -64,7 +67,9 @@
                 android:textSize="14sp"
                 android:textAlignment="center"
                 android:gravity="center"
-                android:text="dkjashdiusa iuadh iuadhiuhad iu ahdiha diu hiuasd i hdashdihasuiihasdi adsh" />
+                android:text="dkjashdiusa iuadh iuadhiuhad iu ahdiha diu hiuasd i hdashdihasuiihasdi adsh"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
         </LinearLayout>
 
         <RelativeLayout
@@ -231,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:text="Submit"
                 android:id="@+id/button"
-                android:layout_below="@+id/btnFile"
+                android:layout_below="@+id/btnFile2"
                 android:layout_marginTop="30dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
@@ -274,19 +279,18 @@
                 android:id="@+id/real_uri"
                 android:textColor="@color/about_txt_color"
                 android:textSize="12dp"
-                android:layout_alignBaseline="@+id/btnFile"
-                android:layout_alignBottom="@+id/btnFile"
-                android:layout_toRightOf="@+id/btnFile"
+                android:visibility="invisible"
+                android:layout_alignTop="@+id/btnFile"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginLeft="10dp"
-                android:visibility="invisible" />
+                android:layout_toRightOf="@+id/btnFile"
+                android:layout_toEndOf="@+id/btnFile"
+                android:layout_marginLeft="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Small Text"
                 android:id="@+id/text_uri"
                 android:layout_alignBottom="@+id/btnFile"
                 android:layout_alignLeft="@+id/real_uri"
@@ -302,6 +306,117 @@
                 android:layout_alignEnd="@+id/limit2"
                 android:layout_alignLeft="@+id/limit2"
                 android:layout_alignStart="@+id/limit2" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah gambar"
+                android:id="@+id/btnFile1"
+                android:background="@color/red"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="invisible"
+                android:layout_below="@+id/btnFile"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/real_uri"
+                android:layout_toStartOf="@+id/real_uri"
+                android:layout_marginTop="5dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tambah gambar"
+                android:id="@+id/btnFile2"
+                android:background="@color/red"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="invisible"
+                android:layout_below="@+id/btnFile1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/real_uri"
+                android:layout_toStartOf="@+id/real_uri"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="no image"
+                android:id="@+id/real_uri1"
+                android:textColor="@color/about_txt_color"
+                android:textSize="12dp"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/btnFile1"
+                android:layout_toRightOf="@+id/btnFile1"
+                android:layout_toEndOf="@+id/btnFile1"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="no image"
+                android:id="@+id/real_uri2"
+                android:textColor="@color/about_txt_color"
+                android:textSize="12dp"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/btnFile2"
+                android:layout_toRightOf="@+id/btnFile2"
+                android:layout_toEndOf="@+id/btnFile2"
+                android:layout_marginLeft="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:src="@drawable/more"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:layout_alignTop="@+id/btnFile1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/btnFile2"
+                android:visibility="invisible" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/more"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btnFile1"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/text_uri1"
+                android:visibility="gone"
+                android:layout_above="@+id/textView4"
+                android:layout_toLeftOf="@+id/textView2"
+                android:layout_toStartOf="@+id/textView2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/text_uri2"
+                android:visibility="gone"
+                android:layout_above="@+id/textView4"
+                android:layout_toLeftOf="@+id/textView2"
+                android:layout_toStartOf="@+id/textView2" />
 
 
         </RelativeLayout>
@@ -327,7 +442,7 @@
         <TextView
             android:id="@+id/about_fragment_version_tv"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:gravity="bottom|center_horizontal"
             android:padding="10dp"
             android:textColor="@color/white"
