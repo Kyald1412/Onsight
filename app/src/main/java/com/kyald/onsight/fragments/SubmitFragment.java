@@ -66,10 +66,8 @@ public class SubmitFragment extends Fragment {
 	Button btnSelFile,btnSelFile1,btnSelFile2,btnSubmit;
 	TextView judul, category, description, name, txt_uri, real_uri, txt_uri1, real_uri1, txt_uri2, real_uri2, txtjdudul, txtdeskripsi, txtnama;
 	View dividerjudul, dividerdeskripsi, dividernama;
-	//String textMessage, textMessage1, textMessage2, textMessage3, textMessage4, str;
-	//ImageView image;
 
-	Uri orgUri,orgUri1,orgUri2, uriFromPath, fileUri;
+	Uri orgUri,fileUri;
 	String convertedPath = "";
 	String convertedPath1 = "";
 	String convertedPath2 = "";
@@ -86,10 +84,6 @@ public class SubmitFragment extends Fragment {
 	String [] filename;
 
 	int gambar = 0;
-
-
-
-
 
 	public static String TAG = SubmitFragment.class.getSimpleName();
 
@@ -139,7 +133,6 @@ public class SubmitFragment extends Fragment {
 		category = (EditText) getView().findViewById(R.id.cat);
 		description = (EditText) getView().findViewById(R.id.desc);
 		name = (EditText) getView().findViewById(R.id.nama);
-		//msg4 = (EditText) getView().findViewById(R.id.et_text4);
 
 		btnSelFile = (Button) getView().findViewById(R.id.btnFile);
 		txt_uri = (TextView) getView().findViewById(R.id.text_uri);
@@ -325,11 +318,8 @@ public class SubmitFragment extends Fragment {
 			public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 				switch (i) {
 					case 0:
-						//setviewenable();
 						setviewdisable();
 						category.setVisibility(View.INVISIBLE);
-						//category.setText("Game");
-						//txtjdudul.setHint("Judul Game");
 						break;
 					case 1:
 						setviewenable();
@@ -400,7 +390,6 @@ public class SubmitFragment extends Fragment {
 
 
 	}
-
 
 	private void selectImage() {
 		final CharSequence[] items = { "Take Photo", "Choose from Gallery", "Cancel" };
@@ -494,6 +483,7 @@ public class SubmitFragment extends Fragment {
 
 		real_uri.setVisibility(View.VISIBLE);
 		btnSelFile.setVisibility(View.VISIBLE);
+
 		btnSubmit.setVisibility(View.VISIBLE);
 
 		imgbtn1.setVisibility(View.VISIBLE);
@@ -515,6 +505,15 @@ public class SubmitFragment extends Fragment {
 
 		real_uri.setVisibility(View.INVISIBLE);
 		btnSelFile.setVisibility(View.INVISIBLE);
+		real_uri1.setVisibility(View.INVISIBLE);
+		btnSelFile1.setVisibility(View.INVISIBLE);
+		real_uri2.setVisibility(View.INVISIBLE);
+		btnSelFile2.setVisibility(View.INVISIBLE);
+
+
+		imgbtn1.setVisibility(View.INVISIBLE);
+		imgbtn2.setVisibility(View.INVISIBLE);
+
 		btnSubmit.setVisibility(View.GONE);
 	}
 
@@ -529,27 +528,7 @@ public class SubmitFragment extends Fragment {
 				// Image captured and saved to fileUri specified in the Intent
 				Toast.makeText(getActivity(), "Image saved to " + fileUri, Toast.LENGTH_LONG).show();
 
-
-				/*if (convertedPath.equals("")) {
-					convertedPath = getRealPathFromURI(fileUri);
-				} else if (!convertedPath.equals("")){
-					convertedPath1 = getRealPathFromURI(fileUri);
-				} else if (!convertedPath.equals("") && !convertedPath.equals("")){
-					convertedPath2 = getRealPathFromURI(fileUri);
-				}*/
-
-				//convertedPath = getRealPathFromURI(orgUri);
 				String ext = fileUri.toString().substring(7);
-				/*if (real_uri.getText().toString().equals("no image")) {
-					real_uri.setText(ext);
-					convertedPath = ext;
-				} else if (!real_uri.getText().toString().equals("no image") && real_uri1.getText().toString().equals("no image") ){
-					real_uri1.setText(ext);
-					convertedPath1 = ext;
-				} else if (!real_uri1.getText().toString().equals("no image") && !real_uri.getText().toString().equals("no image") && real_uri2.getText().toString().equals("no image")){
-					real_uri2.setText(ext);
-					convertedPath2 = ext;
-				}*/
 
 				if ( gambar == 1 ){
 					real_uri.setText(ext);
@@ -581,33 +560,6 @@ public class SubmitFragment extends Fragment {
 
 				txt_uri.setText("Returned Uri: " + orgUri.toString() + "\n");
 
-				//path converted from Uri
-			/*if (convertedPath == "" && convertedPath1 == "" && convertedPath2 == ""){
-				convertedPath = getRealPathFromURI(orgUri);
-			} else if (convertedPath != "" && convertedPath1 == "" && convertedPath2 == ""){
-				convertedPath1 = getRealPathFromURI(orgUri);
-			} else if (convertedPath != "" && convertedPath1 != "" && convertedPath2 == ""){
-				convertedPath2 = getRealPathFromURI(orgUri);
-			}*/
-			/*	if (convertedPath.equals("")) {
-					convertedPath = getRealPathFromURI(orgUri);
-				} else if (!convertedPath.equals("") && convertedPath1.equals("")){
-					convertedPath1 = getRealPathFromURI(orgUri);
-				} else if(!convertedPath.equals("") && !convertedPath1.equals("") && convertedPath2.equals("")){
-					convertedPath2 = getRealPathFromURI(orgUri);
-				}
-*/
-				//convertedPath = getRealPathFromURI(orgUri);
-
-			/*	if (real_uri.getText().toString().equals("no image")) {
-					real_uri.setText(convertedPath);
-				} else if (!real_uri.getText().toString().equals("no image") && real_uri1.getText().toString().equals("no image") ){
-					real_uri1.setText(convertedPath1);
-				} else if (!real_uri1.getText().toString().equals("no image") && !real_uri.getText().toString().equals("no image") && real_uri2.getText().toString().equals("no image")){
-					real_uri2.setText(convertedPath2);
-				}
-*/
-
 				if ( gambar == 1 ){
 					convertedPath = getRealPathFromURI(orgUri);
 					real_uri.setText(convertedPath);
@@ -619,11 +571,6 @@ public class SubmitFragment extends Fragment {
 					real_uri2.setText(convertedPath2);
 				}
 
-
-
-				//Uri convert back again from path
-				//uriFromPath = Uri.fromFile(new File(convertedPath));
-				//text3.setText("Back Uri: " + uriFromPath.toString() + "\n");
 			}
 		}
 
@@ -673,32 +620,6 @@ public class SubmitFragment extends Fragment {
 			BodyPart messageBodyPart5 = new MimeBodyPart();
 			messageBodyPart5.setText("Name = " + msg4);
 
-			//4) create new MimeBodyPart object and set DataHandler object to this object
-
-
-		/*	MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-
-			String filename = convertedPath;//change accordingly
-			DataSource source = new FileDataSource(filename);
-			messageBodyPart2.setDataHandler(new DataHandler(source));
-			messageBodyPart2.setFileName(filename);
-
-			MimeBodyPart messageBodyPart6 = new MimeBodyPart();
-
-			String filename1 = convertedPath1;//change accordingly
-			DataSource source1 = new FileDataSource(filename1);
-			messageBodyPart6.setDataHandler(new DataHandler(source1));
-			messageBodyPart6.setFileName(filename1);
-
-			MimeBodyPart messageBodyPart7 = new MimeBodyPart();
-
-			String filename2 = convertedPath2;//change accordingly
-			DataSource source2 = new FileDataSource(filename2);
-			messageBodyPart7.setDataHandler(new DataHandler(source2));
-			messageBodyPart7.setFileName(filename2);
-*/
-
-
 			if (!convertedPath.equals("") && convertedPath1.equals("") && convertedPath2.equals("")){
 				filename = new String[1];
 				filename[0] = convertedPath;
@@ -715,14 +636,10 @@ public class SubmitFragment extends Fragment {
 				filename[1] = convertedPath1;
 				filename[2] = convertedPath2;
 			}
+
 			//5) create Multipart object and add MimeBodyPart objects to this object
 			Multipart multipart = new MimeMultipart();
 			multipart.addBodyPart(messageBodyPart1);
-
-			//addAttachment(multipart, convertedPath);
-			//addAttachment(multipart, convertedPath1);
-			//addAttachment(multipart, convertedPath2);
-
 
 			for(int i=0 ; i<filename.length ; i++)
 			{
@@ -733,13 +650,9 @@ public class SubmitFragment extends Fragment {
 				multipart.addBodyPart(messageBodyPart2);
 			}
 
-
-			//multipart.addBodyPart(messageBodyPart2);
 			multipart.addBodyPart(messageBodyPart3);
 			multipart.addBodyPart(messageBodyPart4);
 			multipart.addBodyPart(messageBodyPart5);
-			//multipart.addBodyPart(messageBodyPart6);
-			//multipart.addBodyPart(messageBodyPart7);
 
 			//6) set the multiplart object to the message object
 			message.setContent(multipart);
@@ -754,25 +667,6 @@ public class SubmitFragment extends Fragment {
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
-	}
-
- /*   private Message createMessage(String email, String subject, String messageBody, Session session) throws MessagingException, UnsupportedEncodingException {
-        Message message = new MimeMessage(session);
-        message.setFrom(new InternetAddress("weeework.studio@gmail.com", "spongebobsquarepants"));
-        message.addRecipient(Message.RecipientType.TO, new InternetAddress(email, email));
-        message.setSubject(subject);
-        message.setText(messageBody);
-        return message;
-    }
-*/
-
-
-	private static void addAttachment(Multipart multipart, String filename) throws MessagingException {
-		DataSource source = new FileDataSource(filename);
-		MimeBodyPart messageBodyPart2 = new MimeBodyPart();
-		messageBodyPart2.setDataHandler(new DataHandler(source));
-		messageBodyPart2.setFileName(filename);
-		multipart.addBodyPart(messageBodyPart2);
 	}
 
 	private Session createSessionObject() {
@@ -803,7 +697,6 @@ public class SubmitFragment extends Fragment {
 		protected void onPostExecute(Void aVoid) {
 			super.onPostExecute(aVoid);
 			progressDialog.dismiss();
-			//Toast.makeText(getActivity(), "Terimakasih, kami akan me-review isi content anda dan segera mempublishkannya..", Toast.LENGTH_LONG).show();
 
 			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 			builder.setTitle("Sukses!");
@@ -840,10 +733,6 @@ public class SubmitFragment extends Fragment {
 			return true;
 	}
 
-
-
-
-
 	private void enableSubmitIfReady() {
 
 		boolean isReady = judul.getText().toString().length()>0 &&
@@ -851,7 +740,6 @@ public class SubmitFragment extends Fragment {
 				real_uri.getText().toString().length()>10 &&
 				name.getText().toString().length()>0 &&
 				category.getText().toString().length()>0;
-				//msg4.getText().toString().length()>0;
 
 		if (isReady){
 			btnSubmit.setBackgroundColor(getResources().getColor(R.color.red));

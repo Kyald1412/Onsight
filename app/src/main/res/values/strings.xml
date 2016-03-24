@@ -13,7 +13,7 @@
     <string name="favorites">Favorites</string>
     <string name="recipes">Recipes</string>
     <string name="share_success">The article was shared successfully to your timeline</string>
-    <string name="no_internet_connectivity">You are not currently connected to any networks. Please connect your device to any network to get the latest content available.</string>
+    <string name="no_internet_connectivity">Kamu tidak terkoneksi internet, untuk mendapatkan konten terbaru silahkan hubungkan device mu ke internet</string>
     <string name="internet_connectivity">internet SUCCESS</string>
 
     <!-- Admob id -->
@@ -26,6 +26,5 @@
 
     <!-- Facebook -->
     <string name="applicationId">729770857065264</string>
-    <string name="title_activity_main2">Main2Activity</string>
 
 </resources>

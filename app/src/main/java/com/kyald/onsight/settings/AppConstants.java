@@ -40,14 +40,8 @@ public class AppConstants {
 	public static final String USER_MAIL = "dhikyaldwiansyah@gmail.com";
 	public static final String USER_PHONE = "+628973979777";
 
-	public static final String JUDUL = "+628973979777";
-	public static final String CATEGORY = "+628973979777";
-	public static final String DESCRIPTION = "+628973979777";
-	public static final String NAME = "+628973979777";
-	public static final String IMAGE = "+628973979777";
-
 	public static final String FACEBOOK_URL = "http://facebook.com/kyald";
-	public static final String TWITTER_URL = "";
+	public static final String TWITTER_URL = "https://twitter.com/Kyald1412";
 	
 	// Name of Favorites category
 	public static final String CATEGORY_FAVORITE = "Favorites";

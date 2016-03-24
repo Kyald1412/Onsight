@@ -18,13 +18,6 @@ public final class RecipesXMLTagConstants {
 	public static final String TAG_LOGO_INACTIVE = "LogoInactive";
 
 	public static final String TAG_CATEGORY = "Category";
-	public static final String TAG_APPETIZERS_LIST = "ApetizersList";
-	public static final String TAG_MAIN_COURSES_LIST = "MainCoursesList";
-	public static final String TAG_SOUPS_LIST = "SoupsList";
-	public static final String TAG_VEGETERIAN_MEALS_LIST = "VegetarianMealsList";
-	public static final String TAG_DESSERTS_LIST = "DessertsList";
-	public static final String TAG_TIME_SAVERS_LIST = "TimeSaversList";
-	public static final String TAG_FAVORITES_LIST = "FavoritesList";
 	
 	public static final String TAG_RECIPE_INFO = "RecipeInfo";
 	public static final String TAG_RECIPE_INFO_TITLE = "RecipeTitle";

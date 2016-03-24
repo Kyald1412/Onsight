@@ -32,7 +32,6 @@
         android:layout_toLeftOf="@+id/navigationBarSearch"
         android:layout_centerVertical="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/action_bar_shopping_list"
         android:visibility="gone" />
 
       <ImageView

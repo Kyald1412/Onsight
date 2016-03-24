@@ -103,9 +103,7 @@ public class ObtainApplicationDataActivity extends FragmentActivity {
 						inputStream = url.openStream();
 					} else {
 						RecipesXMLTagConstants.TAG_URL_SETTINGS = "";
-						//RecipesXMLTagConstants.TAG_URL_SETTINGS = "";
 						shouldShowToastMessage = true;
-						//inputStream = assetManager.open("recipes_settings.xml");
 						inputStream2 = assetManager.open("recipes_settings.xml");
 					}
 				}
@@ -154,7 +152,7 @@ public class ObtainApplicationDataActivity extends FragmentActivity {
 			} 
 			
 			if (mInterstitialAd != null && mInterstitialAd.isLoaded()) {
-				//mInterstitialAd.show();
+				mInterstitialAd.show();
 			} else {
 				startMainActivity();
 			}

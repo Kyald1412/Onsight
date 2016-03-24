@@ -185,8 +185,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_prep" >
+                    android:layout_height="wrap_content" >
                 </ImageView>
 
                 <TextView
@@ -207,8 +206,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_cook" >
+                    android:layout_height="wrap_content">
                 </ImageView>
 
                 <TextView
@@ -229,8 +227,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_meals" >
+                    android:layout_height="wrap_content">
                 </ImageView>
 
                 <TextView

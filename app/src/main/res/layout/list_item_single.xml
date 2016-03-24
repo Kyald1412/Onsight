@@ -15,8 +15,7 @@
             android:layout_width="fill_parent"
             android:layout_height="200dp"
             android:maxHeight="50dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/pic_samon" />
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/list_item_single_recipe_title"
@@ -40,7 +39,6 @@
             android:layout_height="@dimen/listview_cookit_button_height"
             android:layout_gravity="bottom"
             android:scaleType="fitXY"
-            android:src="@drawable/cook_it_butt"
             android:layout_alignTop="@+id/list_item_single_recipe_title"
             android:layout_marginLeft="300dp"
             android:layout_marginStart="265dp"
@@ -90,7 +88,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:drawableLeft="@drawable/pin"
             android:drawablePadding="2dp"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
@@ -106,7 +103,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
-            android:drawableLeft="@drawable/prep_time"
             android:drawablePadding="2dp"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
@@ -122,7 +118,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
-            android:drawableLeft="@drawable/cook_time"
             android:drawablePadding="2dp"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
@@ -139,7 +134,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
-            android:drawableLeft="@drawable/calories"
             android:drawablePadding="2dp"
             android:padding="2dp"
             android:singleLine="true"

@@ -219,16 +219,6 @@ public class MainActivity extends FragmentActivity {
 
 		mMenuItems.add(logoMenuItem);
 
-		/*
-		for (int i = 0; i < categories.size(); i++) {
-			if (categories.get(i).getRecipes().size() > 0) {
-				mMenuItems.add(new DrawerListMenuItem(categories.get(i)
-						.getName(), false, categories.get(i).getIcon(), true));
-			}
-		}
-
-		*/
-
 		mMenuItems.add(new DrawerListMenuItem(AppConstants.CATEGORY_FAVORITE, false, "fav",
 				true));
 		
@@ -343,14 +333,11 @@ public class MainActivity extends FragmentActivity {
 		showScreen(null, splash, SplashScreenFragment.TAG, false);
 
 		if (isNetworkAvailable()) {
-			//URL url = new URL(RecipesXMLTagConstants.TAG_URL_SETTINGS);
-			//inputStream = url.openStream();
 
 			new Handler().postDelayed(new Runnable() {
 
 				@Override
 				public void run() {
-//					getSupportFragmentManager().popBackStack();
 					showMainScreen();
 
 					if (AppConstants.ENABLE_ADMOB_HOME_PAGE) {
@@ -372,9 +359,6 @@ public class MainActivity extends FragmentActivity {
 			}, SPLASH_TIME_OUT);
 
 		} else {
-			//shouldShowToastMessage = true;
-			//RecipesXMLTagConstants.TAG_URL_SETTINGS = "";
-			//inputStream = assetManager.open("recipes_settings.xml");
 
 			Toast.makeText(this,
 					getString(R.string.no_internet_connectivity),
@@ -384,7 +368,6 @@ public class MainActivity extends FragmentActivity {
 
 				@Override
 				public void run() {
-			//		getSupportFragmentManager().popBackStack();
 					showMainScreen();
 
 
@@ -419,8 +402,6 @@ public class MainActivity extends FragmentActivity {
 		} else
 			return true;
 	}
-
-
 
 	/**
 	 * Shows the Main Screen
@@ -470,7 +451,6 @@ public class MainActivity extends FragmentActivity {
 		NavigationBarFragment navBar = NavigationBarFragment.newInstance(
 				(ApplicationContext) getApplicationContext(), "", false, false, true, true, false);
 		navBar.setShowBack(true);
-		// navBar.setTitleText(getString(R.string.recipes));
 		showScreen(navBar, screen, SingleRecipeFragment.TAG, true);
 	}
 	
@@ -485,7 +465,6 @@ public class MainActivity extends FragmentActivity {
 		NavigationBarFragment navBar = NavigationBarFragment.newInstance(
 				(ApplicationContext) getApplicationContext(), "", false, false, false, true, false);
 		navBar.setShowBack(true);
-		// navBar.setTitleText(getString(R.string.recipes));
 		showScreen(navBar, screen, ImageFragment.TAG, true);
 	}
 	
