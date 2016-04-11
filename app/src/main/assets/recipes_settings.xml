@@ -4,25 +4,387 @@
     <MainSettings>
         <LogoActive>logo_active</LogoActive>
         <LogoInactive>logo</LogoInactive>
-   	</MainSettings>
+    </MainSettings> 
     
-    <!-- List with main courses -->
-    <Category name="Tokoh"  icon="tokoh">
-        <RecipeInfo id="1">
+   <!-- adsdsa !-->
+
+    <Category name="Featured" icon="fav">
+       <RecipeInfo id="1">
             
-            <RecipeTitle>Soekarno</RecipeTitle>
+      <RecipeTitle>Bukit Paralayang</RecipeTitle>
             
             <RecipePictureList>
-            	<RecipePicture>soekarno</RecipePicture>
-            	<RecipePicture>soekarno</RecipePicture>
-            	<RecipePicture>soekarno</RecipePicture>
+              <RecipePicture>bukitparalayang</RecipePicture>
+              <RecipePicture>bukitparalayang</RecipePicture>
             </RecipePictureList>
-            
+                
             <RecipeSummary>
-                <RecipeSummaryDescription>Insinyur Soekarno Insinyur SoekarnoInsinyur SoekarnoInsinyur SoekarnoInsinyur SoekarnoInsinyur SoekarnoInsinyur SoekarnoInsinyur Soekarno</RecipeSummaryDescription>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Bukit Palayang</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Citangtu, Kuningan Satu</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
             </RecipeSummary>
+
+
+        </RecipeInfo>
+
+
+
+<RecipeInfo id="60">
             
-        </RecipeInfo>        
-    </Category>
+      <RecipeTitle>Taman Ade Irma Suryani</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>adeirma</RecipePicture>
+              <RecipePicture>adeirma</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Taman Ade Irma Suryani</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Jl. Yos Sudarso, Cirebon</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+        </RecipeInfo>
+
+
+<RecipeInfo id="61">
+            
+      <RecipeTitle>Telaga Nilem</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>telaganilem</RecipePicture>
+              <RecipePicture>telaganilem</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Telaga Nilem</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Kaduela pasawahan , Kuningan Satu</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+
+
+       </Category>
+
+
+    <Category name="Kuningan" icon="fav">
+       <RecipeInfo id="2">
+            
+      <RecipeTitle>Telaga Nilem</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>telaganilem</RecipePicture>
+              <RecipePicture>telaganilem</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Telaga Nilem</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Kaduela pasawahan , Kuningan Satu</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+      <RecipeInfo id="3">
+            
+      <RecipeTitle>Kawah Gunung Ciremai</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>kawahciremai</RecipePicture>
+              <RecipePicture>kawahciremai</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Kawah Ciremai</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Gunung Ciremai, Kuningan</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+    <RecipeInfo id="4">
+            
+      <RecipeTitle>Bumi Perkemahan Ipukan</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>kemahipukan</RecipePicture>
+              <RecipePicture>kemahipukan</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Bumi Perkemahan Ipukan</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Cisantana - Cigugur, Kuningan</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+<RecipeInfo id="5">
+            
+      <RecipeTitle>Bukit Cariang</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>bukitcariang</RecipePicture>
+              <RecipePicture>bukitcariang</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Bukit Cariang</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Cibingbin, Perbatasan Kuningan-Brebes</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+
+<RecipeInfo id="6">
+            
+      <RecipeTitle>Bukit Panembongan</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>panembongan</RecipePicture>
+              <RecipePicture>panembongan</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Bukit Panembongan</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Garawangi, Kuningan</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+        <RecipeInfo id="7">
+            
+      <RecipeTitle>Cadas Gantung</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>cadasgantung</RecipePicture>
+              <RecipePicture>cadasgantung</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Cadas Gantung</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Desa citundun - Kecamatan Ciwaru,Kuningan</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+        <RecipeInfo id="8">
+            
+      <RecipeTitle>Bukit Cariang</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>bukitcariang</RecipePicture>
+              <RecipePicture>bukitcariang</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Bukit Cariang</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Cibingbin, Perbatasan Kuningan-Brebes</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+        <RecipeInfo id="9">
+            
+      <RecipeTitle>Curug Luhur</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>curugluhur</RecipePicture>
+              <RecipePicture>curugluhur</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Curug Luhur</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Tanjung kerta karangkencana, Kuningan</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+
+        <RecipeInfo id="10">
+            
+      <RecipeTitle>Curug Landung</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>curuglantung</RecipePicture>
+              <RecipePicture>curuglantung</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Curug Landung</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Palutungan Cisantana Cigugur, Kuningan</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+       </Category>
+
+
+
+
+   <Category name="Cirebon" icon="fav">
+       <RecipeInfo id="11">
+            
+      <RecipeTitle>Keraton kasepuhan</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>kasepuhan</RecipePicture>
+              <RecipePicture>kasepuhan</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Keraton kasepuhan</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Jl. Jagasatru, Cirebon</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+
+       <RecipeInfo id="12">
+            
+      <RecipeTitle>Keraton Kanoman</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>kanoman</RecipePicture>
+              <RecipePicture>kanoman</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Keraton Kanoman</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Jl. Winaon, Kampung Kanoman, Kel. Lemah Wungkuk, Cirebon</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+<RecipeInfo id="13">
+            
+      <RecipeTitle>Taman Ade Irma Suryani</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>adeirma</RecipePicture>
+              <RecipePicture>adeirma</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Taman Ade Irma Suryani</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Jl. Yos Sudarso, Cirebon</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+
+  <RecipeInfo id="14">
+            
+      <RecipeTitle>Bukit Gronggong</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>gronggong</RecipePicture>
+              <RecipePicture>gronggong</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Bukit Gronggong</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Gronggong, Tengah jalur Kuningan - Cirebon</RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+
+  <RecipeInfo id="15">
+            
+      <RecipeTitle>Pantai Kejawanan</RecipeTitle>
+            
+            <RecipePictureList>
+              <RecipePicture>kejawanan</RecipePicture>
+              <RecipePicture>kejawanan</RecipePicture>
+            </RecipePictureList>
+                
+            <RecipeSummary>
+
+                <RecipeSummaryDescription>Belum ada deskripsi</RecipeSummaryDescription>
+                <RecipeSummaryPreparationTime>Pantai Kejawanan</RecipeSummaryPreparationTime>
+                <RecipeSummaryCookingTime>Jln. Yos Sudarso, Kota Cirebon. </RecipeSummaryCookingTime>
+                <RecipeSummaryPortions>Jawa Barat</RecipeSummaryPortions>
+                <RecipeSummaryCalories>Kuninganizer</RecipeSummaryCalories>
+            </RecipeSummary>
+
+
+        </RecipeInfo>
+
+       </Category>
 
 </Settings>

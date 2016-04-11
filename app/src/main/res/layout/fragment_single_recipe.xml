@@ -7,7 +7,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -21,8 +22,9 @@
                 android:src="@drawable/pic_big" /> -->
             <android.support.v4.view.ViewPager
                 android:id="@+id/imagepager"
-                android:layout_width="match_parent"
-                android:layout_height="300dp" />
+                android:layout_width="fill_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentBottom="true" />
 
             <ImageView
                 android:id="@+id/fra_single_share"
@@ -114,7 +116,8 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/green"
-            android:paddingBottom="0.5dp" >
+            android:paddingBottom="0.5dp"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/fra_single_recipe_summary_tab"
@@ -148,119 +151,96 @@
             </ImageView>
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:visibility="gone">
+            android:layout_height="148dp"
+            android:visibility="visible">
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_pin" >
-                </ImageView>
+                android:id="@+id/relativeLayout"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
 
                 <TextView
-                    android:id="@+id/fra_single_recipe_location"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Italy"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-                </ImageView>
-
-                <TextView
-                    android:id="@+id/fra_single_recipe_prep_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Italy"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                </ImageView>
-
-                <TextView
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="lokasi"
                     android:id="@+id/fra_single_recipe_cook_time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Italy"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/imageView5"
+                    android:layout_toEndOf="@+id/imageView5"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
+                    android:layout_marginTop="10dp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/icon_pin"
+                    android:id="@+id/imageView5"
+                    android:visibility="visible"
+                    android:layout_alignParentTop="true">
                 </ImageView>
 
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="provinsi"
                     android:id="@+id/fra_single_recipe_portions"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Italy"
+                    android:visibility="visible"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
+                    android:layout_below="@+id/fra_single_recipe_cook_time"
+                    android:layout_toRightOf="@+id/imageView5"
+                    android:layout_toEndOf="@+id/imageView5"
+                    android:layout_marginTop="5dp" />
+            </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="0dp"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_cal" >
-                </ImageView>
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout2"
+                android:background="@color/red">
 
                 <TextView
-                    android:id="@+id/fra_single_recipe_calories"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Italy"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </LinearLayout>
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="nama"
+                    android:id="@+id/fra_single_recipe_prep_time"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/red"
+            android:id="@+id/relativeLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="source"
+                android:id="@+id/fra_single_recipe_calories"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/fra_single_recipe_description"
@@ -272,7 +252,8 @@
             android:paddingBottom="10dp"
             android:text="Text"
             android:textColor="@android:color/black"
-            android:textSize="18sp" >
+            android:textSize="18sp"
+            android:gravity="center">
         </TextView>
 
         <LinearLayout
@@ -283,6 +264,19 @@
             android:orientation="vertical"
             android:visibility="gone" >
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/fra_single_recipe_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="Text"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/fra_single_recipe_how_to_prepare"

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Version 0.9.1 BETA Release"
+        android:text="Version 0.9.9b"
         android:id="@+id/textView9"
         android:textColor="@color/white"
         android:layout_alignParentBottom="true"

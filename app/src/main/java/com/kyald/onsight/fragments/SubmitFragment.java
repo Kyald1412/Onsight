@@ -12,7 +12,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.CursorLoader;
@@ -27,16 +26,13 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kyald.onsight.R;
-import com.kyald.onsight.settings.AppConstants;
 
 import java.io.File;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -45,7 +41,6 @@ import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
-import javax.mail.Authenticator;
 import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -112,11 +107,11 @@ public class SubmitFragment extends Fragment {
 
 		TextView blogUrl = (TextView) getView().findViewById(
 				R.id.about_fragment_blog_url);
-		blogUrl.setText("Kirimkan ulasan tempat wisata kesukaanmu atau makanan favoritmu disini");
+		blogUrl.setText("Kirimkan ulasan tempat favoritmu disini");
 
 		TextView blogMail = (TextView) getView().findViewById(
 				R.id.about_fragment_blog_mail);
-		blogMail.setText("Beritahu seluruh indonesia bahkan seluruh dunia tentang ulasanmu");
+		blogMail.setText("Beritahu seluruh indonesia bahkan seluruh dunia tempat favoritmu");
 
 		TextView blogPhone = (TextView) getView().findViewById(
 				R.id.about_fragment_blog_phone);
@@ -132,7 +127,7 @@ public class SubmitFragment extends Fragment {
 		judul = (EditText) getView().findViewById(R.id.judul);
 		category = (EditText) getView().findViewById(R.id.cat);
 		description = (EditText) getView().findViewById(R.id.desc);
-		name = (EditText) getView().findViewById(R.id.nama);
+		name = (EditText) getView().findViewById(R.id.fra_single_recipe_prep_time);
 
 		btnSelFile = (Button) getView().findViewById(R.id.btnFile);
 		txt_uri = (TextView) getView().findViewById(R.id.text_uri);
@@ -303,88 +298,6 @@ public class SubmitFragment extends Fragment {
 			public void onClick(View arg0) {
 				gambar = 3;
 				selectImage();
-			}
-		});
-
-
-		spinner = (Spinner)getView().findViewById(R.id.spinner);
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-				android.R.layout.simple_spinner_item,paths);
-
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinner.setAdapter(adapter);
-		spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-			@Override
-			public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-				switch (i) {
-					case 0:
-						setviewdisable();
-						category.setVisibility(View.INVISIBLE);
-						break;
-					case 1:
-						setviewenable();
-						category.setVisibility(View.INVISIBLE);
-						category.setText("Flora");
-						txtjdudul.setText("Nama Tanaman/Tumbuhan");
-						judul.setHint("Melati, Mawar, dll...");
-
-						break;
-					case 2:
-						setviewenable();
-						category.setVisibility(View.INVISIBLE);
-						category.setText("Tokoh");
-						txtjdudul.setText("Nama Tokoh");
-						judul.setHint("Soekarno, Hatta, dll..");
-						break;
-					case 3:
-						setviewenable();
-						category.setVisibility(View.INVISIBLE);
-						category.setText("Tempat Wisata");
-						judul.setHint("Taman jomblo, taman bunga, dll..");
-						txtjdudul.setText("Nama Tempat Wisata");
-						break;
-					case 4:
-						setviewenable();
-						category.setVisibility(View.INVISIBLE);
-						category.setText("Kuliner");
-						txtjdudul.setText("Nama Kuliner");
-						judul.setHint("Rendang, Es Cendol, dll...");
-						break;
-					case 5:
-						setviewenable();
-						category.setVisibility(View.INVISIBLE);
-						category.setText("Fauna");
-						txtjdudul.setText("Nama Hewan");
-						judul.setHint("Gajah, Singa, dll...");
-						break;
-					case 6:
-						setviewenable();
-						category.setVisibility(View.INVISIBLE);
-						category.setText("Kerajinan tangan");
-						txtjdudul.setText("Nama Kerajinan Tangan");
-						judul.setHint("Batik, dll...");
-						break;
-					case 7:
-						setviewenable();
-						category.setVisibility(View.INVISIBLE);
-						category.setText("Alat Musik");
-						txtjdudul.setText("Nama Alat Musik");
-						judul.setHint("Sasando, seruling, dll...");
-						break;
-					case 8:
-						setviewenable();
-						category.setVisibility(View.VISIBLE);
-						category.setText("");
-						txtjdudul.setText("Nama/Judul");
-						judul.setHint("");
-						break;
-
-				}
-			}
-
-			@Override
-			public void onNothingSelected(AdapterView<?> adapterView) {
-
 			}
 		});
 
@@ -612,7 +525,7 @@ public class SubmitFragment extends Fragment {
 			messageBodyPart1.setText("Judul = " + msg1);
 
 			BodyPart messageBodyPart3 = new MimeBodyPart();
-			messageBodyPart3.setText("Kategori = " + msg2);
+			messageBodyPart3.setText("Lokasi = " + msg2);
 
 			BodyPart messageBodyPart4 = new MimeBodyPart();
 			messageBodyPart4.setText("Description = " + msg3);
