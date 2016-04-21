@@ -319,7 +319,7 @@ public class MainActivity extends FragmentActivity {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Share this app:");
 		builder.append("\n\n");
-		builder.append("Download more Onsight at " + "http://play.google.com/store/apps/details?id=" + this.getPackageName());
+		builder.append("Download more Onsight at " + "http://play.google.com/store/apps/details?id=com.kyald.onsight" + this.getPackageName());
 		return builder.toString();
 	}
 

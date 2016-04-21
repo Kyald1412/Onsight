@@ -36,7 +36,7 @@ public class AppConstants {
     
     // About Page Strings
     public static final String USER_BLOG_TITLE = "Onsight - Indonesia";
-	public static final String USER_WEBSITE_URL = "";
+	public static final String USER_WEBSITE_URL = "Dhiky Aldwiansyah";
 	public static final String USER_MAIL = "dhikyaldwiansyah@gmail.com";
 	public static final String USER_PHONE = "+628973979777";
 

@@ -10,66 +10,77 @@
         android:layout_height="fill_parent"
         android:id="@+id/xxx">
 
-        <ImageView
-            android:id="@+id/list_item_single_main_image"
-            android:layout_width="fill_parent"
-            android:layout_height="200dp"
-            android:maxHeight="50dp"
-            android:scaleType="centerCrop" />
-
-        <TextView
-            android:id="@+id/list_item_single_recipe_title"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/listview_title_height"
-            android:layout_alignBottom="@id/list_item_single_main_image"
-            android:background="@color/half_transparent"
-            android:ellipsize="marquee"
-            android:gravity="center_vertical"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:minHeight="30dp"
-            android:paddingLeft="10dp"
-            android:singleLine="true"
-            android:text="Smoked samon canapes"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/listview_title_fontsize" />
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/listview_cookit_button_height"
-            android:layout_gravity="bottom"
-            android:scaleType="fitXY"
-            android:layout_alignTop="@+id/list_item_single_recipe_title"
-            android:layout_marginLeft="300dp"
-            android:layout_marginStart="265dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignBottom="@+id/list_item_single_main_image"
-            android:visibility="gone"
-            android:id="@+id/imageView1" />
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignTop="@+id/list_item_single_recipe_title"
-            android:layout_alignBottom="@+id/list_item_single_main_image"
-            android:background="#c8ff0000"
-            android:id="@+id/imageView"
-            android:layout_toEndOf="@+id/imageView1"
-            android:layout_marginLeft="300dp"
-            android:layout_marginStart="300dp"
-            android:layout_toRightOf="@+id/imageView1">
+            android:background="@drawable/shadow_11919">
+
+            <ImageView
+                android:id="@+id/list_item_single_main_image"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:maxHeight="50dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="4dp" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Details"
-                android:id="@+id/textView"
-                android:textColor="#FFFFFF"
-                android:password="false"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:id="@+id/list_item_single_recipe_title"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/listview_title_height"
+                android:layout_alignBottom="@id/list_item_single_main_image"
+                android:background="@color/half_transparent"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:minHeight="30dp"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="Smoked samon canapes"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16dp"
+                android:layout_margin="4dp" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/listview_cookit_button_height"
+                android:layout_gravity="bottom"
+                android:scaleType="fitXY"
+                android:layout_alignTop="@+id/list_item_single_recipe_title"
+                android:layout_marginLeft="300dp"
+                android:layout_marginStart="265dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/list_item_single_main_image"
+                android:visibility="gone"
+                android:id="@+id/imageView1" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/list_item_single_recipe_title"
+                android:layout_alignBottom="@+id/list_item_single_main_image"
+                android:background="#c8ff0000"
+                android:id="@+id/imageView"
+                android:layout_marginLeft="260dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginBottom="4dp"
+                android:layout_alignLeft="@+id/list_item_single_main_image"
+                android:layout_alignStart="@+id/list_item_single_main_image">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Details"
+                    android:id="@+id/textView"
+                    android:textColor="#FFFFFF"
+                    android:password="false"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="16dp" />
+            </RelativeLayout>
         </RelativeLayout>
 
     </RelativeLayout>

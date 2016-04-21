@@ -120,9 +120,9 @@ public class SubmitFragment extends Fragment {
 		btnSubmit = (Button) getView().findViewById(R.id.button);
 
 
-		btnSubmit.setEnabled(false);
-		btnSubmit.setBackgroundColor(getResources().getColor(R.color.grey));
-		btnSubmit.setTextColor(getResources().getColor(R.color.white));
+		//btnSubmit.setEnabled(false);
+		//btnSubmit.setBackgroundColor(getResources().getColor(R.color.grey));
+		//btnSubmit.setTextColor(getResources().getColor(R.color.white));
 
 		judul = (EditText) getView().findViewById(R.id.judul);
 		category = (EditText) getView().findViewById(R.id.cat);
@@ -141,97 +141,16 @@ public class SubmitFragment extends Fragment {
 		txt_uri2 = (TextView) getView().findViewById(R.id.text_uri2);
 		real_uri2 = (TextView) getView().findViewById(R.id.real_uri2);
 
-		txtjdudul = (TextView) getView().findViewById(R.id.textView3); // nama tokoh/wisata/dll
-		txtdeskripsi = (TextView) getView().findViewById(R.id.textView5); // deskripsi
-		txtnama = (TextView) getView().findViewById(R.id.textView6); // nama kamu
+		//txtjdudul = (TextView) getView().findViewById(R.id.textView3); // nama tokoh/wisata/dll
+		//txtdeskripsi = (TextView) getView().findViewById(R.id.textView5); // deskripsi
+		//txtnama = (TextView) getView().findViewById(R.id.textView6); // nama kamu
 
-		dividerjudul = getView().findViewById(R.id.limit1);
-		dividerdeskripsi = getView().findViewById(R.id.limit3);
-		dividernama = getView().findViewById(R.id.limit4);
+		//dividerjudul = getView().findViewById(R.id.limit1);
+		//dividerdeskripsi = getView().findViewById(R.id.limit3);
+		//dividernama = getView().findViewById(R.id.limit4);
 
 		imgbtn1 = (ImageButton) getView().findViewById(R.id.imageButton);
 		imgbtn2 = (ImageButton) getView().findViewById(R.id.imageButton2);
-
-
-
-		judul.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void afterTextChanged(Editable arg0) {
-				enableSubmitIfReady();
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-			}
-		});
-
-		real_uri.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void afterTextChanged(Editable arg0) {
-				enableSubmitIfReady();
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-			}
-		});
-
-
-		category.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void afterTextChanged(Editable arg0) {
-				enableSubmitIfReady();
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-			}
-		});
-
-
-		description.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void afterTextChanged(Editable arg0) {
-				enableSubmitIfReady();
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-			}
-		});
-
-
-
-		name.addTextChangedListener(new TextWatcher() {
-			@Override
-			public void afterTextChanged(Editable arg0) {
-				enableSubmitIfReady();
-			}
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before, int count) {
-			}
-		});
 
 		imgbtn1.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -261,16 +180,7 @@ public class SubmitFragment extends Fragment {
 			@Override
 			public void onClick(View view) {
 
-				if (isNetworkAvailable()) {
-					String email = "hunginda@gmail.com";
-					String message1 = judul.getText().toString();
-					String message2 = category.getText().toString();
-					String message3 = description.getText().toString();
-					String message4 = name.getText().toString();
-					sendMail(email, message1, message2, message3, message4);
-				} else {
-					Toast.makeText(getActivity(), "Please connect to any network available first.", Toast.LENGTH_SHORT).show();
-				}
+				enableSubmitIfReady();
 			}
 		});
 
@@ -655,12 +565,36 @@ public class SubmitFragment extends Fragment {
 				category.getText().toString().length()>0;
 
 		if (isReady){
-			btnSubmit.setBackgroundColor(getResources().getColor(R.color.red));
-			btnSubmit.setTextColor(getResources().getColor(R.color.white));
+			//btnSubmit.setBackgroundColor(getResources().getColor(R.color.red));
+			//btnSubmit.setTextColor(getResources().getColor(R.color.white));
+
+			if (isNetworkAvailable()) {
+				String email = "hunginda@gmail.com";
+				String message1 = judul.getText().toString();
+				String message2 = category.getText().toString();
+				String message3 = description.getText().toString();
+				String message4 = name.getText().toString();
+				sendMail(email, message1, message2, message3, message4);
+			} else {
+				Toast.makeText(getActivity(), "Please connect to any network available first.", Toast.LENGTH_SHORT).show();
+			}
+
 		} else{
-			btnSubmit.setBackgroundColor(getResources().getColor(R.color.grey));
+			//btnSubmit.setBackgroundColor(getResources().getColor(R.color.grey));
+
+			AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+			builder.setTitle("Kesalahan!");
+			builder.setMessage("Anda harus mengisi semua form yang ada")
+					.setCancelable(false)
+					.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int id) {
+							//do things
+						}
+					});
+			AlertDialog alert = builder.create();
+			alert.show();
 		}
-		btnSubmit.setEnabled(isReady);
+		//btnSubmit.setEnabled(isReady);
 
 	}
 

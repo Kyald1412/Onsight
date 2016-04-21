@@ -2,13 +2,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white" >
+    android:background="@android:color/white"
+    android:fillViewport="false">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:minHeight="900dp">
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -91,7 +93,7 @@
                 android:singleLine="true"
                 android:text="Smoked samon canapes"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/fra_single_recipe_image_count"
@@ -109,6 +111,15 @@
                 android:text="3 pics"
                 android:textColor="@android:color/white"
                 android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
         </RelativeLayout>
 
@@ -160,32 +171,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/relativeLayout"
-                android:layout_below="@+id/relativeLayout2"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="lokasi"
-                    android:id="@+id/fra_single_recipe_cook_time"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/imageView5"
-                    android:layout_toEndOf="@+id/imageView5"
-                    android:textColor="@android:color/black"
-                    android:layout_marginTop="10dp" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:src="@drawable/icon_pin"
-                    android:id="@+id/imageView5"
-                    android:visibility="visible"
-                    android:layout_alignParentTop="true">
-                </ImageView>
+                android:background="@drawable/shadow_11919">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -195,32 +183,142 @@
                     android:id="@+id/fra_single_recipe_portions"
                     android:visibility="visible"
                     android:textColor="@android:color/black"
-                    android:layout_below="@+id/fra_single_recipe_cook_time"
-                    android:layout_toRightOf="@+id/imageView5"
-                    android:layout_toEndOf="@+id/imageView5"
-                    android:layout_marginTop="5dp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:id="@+id/relativeLayout2"
-                android:background="@color/red">
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="nama"
-                    android:id="@+id/fra_single_recipe_prep_time"
+                    android:text="lokasi"
+                    android:id="@+id/fra_single_recipe_cook_time"
+                    android:textColor="@android:color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textIsSelectable="false"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_pin"
+                    android:id="@+id/imageView5"
+                    android:visibility="visible"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:textColor="@color/white" />
+                    android:layout_marginTop="10dp">
+                </ImageView>
+
             </RelativeLayout>
 
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="290dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/relativeLayout2"
+            android:background="@drawable/shadow_11919">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="nama"
+                android:id="@+id/fra_single_recipe_prep_time"
+                android:layout_alignParentTop="false"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="source"
+                android:id="@+id/fra_single_recipe_calories"
+                android:gravity="left"
+                android:textColor="@color/red"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/fra_single_recipe_description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="Text"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
+                android:layout_below="@+id/textView10"
+                android:layout_alignRight="@+id/fra_single_recipe_calories"
+                android:layout_alignEnd="@+id/fra_single_recipe_calories"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Review"
+                android:id="@+id/textView10"
+                android:gravity="center"
+                android:layout_alignRight="@+id/fra_single_recipe_calories"
+                android:layout_alignEnd="@+id/fra_single_recipe_calories"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/limit2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#000000"
+                android:visibility="visible"
+                android:layout_above="@+id/fra_single_recipe_description"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fra_single_recipe_ingredients"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -231,39 +329,7 @@
             android:background="@color/red"
             android:id="@+id/relativeLayout3">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="source"
-                android:id="@+id/fra_single_recipe_calories"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:textColor="@color/white" />
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/fra_single_recipe_description"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="Text"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:gravity="center">
-        </TextView>
-
-        <LinearLayout
-            android:id="@+id/fra_single_recipe_ingredients"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical"
-            android:visibility="gone" >
-        </LinearLayout>
 
         <TextView
             android:id="@+id/fra_single_recipe_location"
@@ -286,6 +352,94 @@
             android:orientation="vertical"
             android:visibility="gone" >
         </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/shadow_11919"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="59dp">
+
+                <View
+                    android:id="@+id/limitd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#000000"
+                    android:visibility="visible"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Comments (1)"
+                    android:id="@+id/textView3"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="15dp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/me"
+                    app:civ_border_width="1dp"
+                    app:civ_border_color="#000000"
+                    android:layout_below="@+id/limitd"
+                    android:layout_alignLeft="@+id/limitd"
+                    android:layout_alignStart="@+id/limitd"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:id="@+id/ratingBar"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignTop="@+id/limitd"
+                    android:layout_toRightOf="@+id/profile_image1"
+                    android:layout_toEndOf="@+id/profile_image1"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="10dp" />
+
+                <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/seekBar"
+                    android:layout_above="@+id/textView3"
+                    android:layout_alignLeft="@+id/ratingBar"
+                    android:layout_alignStart="@+id/ratingBar"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginStart="31dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Coming soon ~!"
+                    android:id="@+id/textView4"
+                    android:layout_below="@+id/ratingBar"
+                    android:layout_alignLeft="@+id/ratingBar"
+                    android:layout_alignStart="@+id/ratingBar"
+                    android:layout_marginTop="10dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
     </LinearLayout>
 
 </ScrollView>

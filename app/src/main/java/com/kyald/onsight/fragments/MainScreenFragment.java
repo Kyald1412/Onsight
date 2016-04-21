@@ -1,16 +1,28 @@
 package com.kyald.onsight.fragments;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.kyald.onsight.ApplicationContext;
 import com.kyald.onsight.MainActivity;
@@ -23,9 +35,13 @@ import com.huewu.pla.lib.MultiColumnListView;
 import com.huewu.pla.lib.internal.PLA_AbsListView;
 import com.huewu.pla.lib.internal.PLA_AdapterView;
 import com.huewu.pla.lib.internal.PLA_AdapterView.OnItemClickListener;
+import com.kyald.onsight.utils.RecipesXMLTagConstants;
+import com.kyald.onsight.utils.SettingsXMLParser;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+
+import org.xmlpull.v1.XmlPullParserException;
 
 /**
  * Fragment for the main screen
@@ -42,6 +58,9 @@ public class MainScreenFragment extends Fragment {
 
 	private DisplayImageOptions mImageOptions;
 	private ArrayList<Category> mCategories;
+	private SwipeRefreshLayout swipeContainer;
+
+
 	/**
 	 * Constructor
 	 */
@@ -96,6 +115,9 @@ public class MainScreenFragment extends Fragment {
 
 		mListView = (MultiColumnListView) view.findViewById(android.R.id.list);
 
+		swipeContainer = (SwipeRefreshLayout) view.findViewById(R.id.swipeContainer);
+
+
 		mHeaderView = inflater.inflate(R.layout.list_header_main, container,
 				false);
 
@@ -120,7 +142,29 @@ public class MainScreenFragment extends Fragment {
 				.getFavoriteCategory((MainActivity) getActivity()));
 
 		mListView.setAdapter(new MainFragmentListAdapter(getActivity(),
-				fixCategoriesForAdapter(mCategories)));
+			fixCategoriesForAdapter(mCategories)));
+
+
+		swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+			@Override
+			public void onRefresh() {
+				// Your code to refresh the list here.
+				// Make sure you call swipeContainer.setRefreshing(false)
+				// once the network request has completed successfully.
+				//  fetchTimelineAsync(0);
+
+				//mListView.setAdapter(null);
+				//mCategories.clear();
+				//fixCategoriesForAdapter(mCategories).clear();
+
+
+				RetrieveXMLData task = new RetrieveXMLData();
+				task.execute();
+
+			}
+		});
+
+
 
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -314,4 +358,101 @@ public class MainScreenFragment extends Fragment {
 			return convertView;
 		}
 	}
-}
+
+
+	private boolean isNetworkAvailable() {
+		ConnectivityManager cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo ni = cm.getActiveNetworkInfo();
+		if (ni == null) {
+			// There are no active networks.
+			return false;
+		} else
+			return true;
+	}
+
+
+	class RetrieveXMLData extends AsyncTask<Void, Void, Void> {
+
+
+		@Override
+		protected Void doInBackground(Void... params) {
+
+			AssetManager assetManager = getActivity().getAssets();
+			InputStream inputStream = null;
+			InputStream inputStream2 = null;
+			try {
+
+				URL url = new URL(RecipesXMLTagConstants.TAG_URL_SETTINGS);
+				inputStream = url.openStream();
+
+				((ApplicationContext) getActivity().getApplicationContext())
+							.setParsedApplicationSettings(SettingsXMLParser
+									.parse(inputStream));
+
+			} catch (IOException e) {
+				Log.e(TAG, e.getMessage());
+			} catch (XmlPullParserException e) {
+				e.printStackTrace();
+			}
+
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+				final Handler handler = new Handler();
+				handler.postDelayed(new Runnable() {
+					@Override
+					public void run() {
+
+						swipeContainer.setRefreshing(false);
+
+						mListView.setAdapter(new MainFragmentListAdapter(getActivity(),
+								fixCategoriesForAdapter(mCategories)));
+
+						Fragment frg = null;
+						frg = getActivity().getSupportFragmentManager().findFragmentByTag(MainScreenFragment.TAG);
+						final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+						ft.detach(frg);
+						ft.attach(frg);
+						ft.commit();
+
+
+					}
+				}, 1500);
+
+			/*final Handler handler2 = new Handler();
+			handler2.postDelayed(new Runnable() {
+				@Override
+				public void run() {
+
+
+
+
+
+				}
+			}, 2000);*/
+
+			}
+
+
+		}
+
+
+	}
+
+
+
+/*
+final Handler handler = new Handler();
+handler.postDelayed(new Runnable() {
+@Override
+public void run() {
+		mListView.setAdapter(new MainFragmentListAdapter(getActivity(),
+		fixCategoriesForAdapter(mCategories)));
+		swipeContainer.setRefreshing(false);
+
+		}
+		}, 2000);
+
+		*/

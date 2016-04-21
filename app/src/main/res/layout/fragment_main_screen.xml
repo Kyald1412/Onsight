@@ -46,143 +46,33 @@
 
     </RelativeLayout>
 
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:visibility="gone">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:visibility="visible"
-            android:id="@+id/linearlinear">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Popular"
-                android:background="@color/red"
-                android:textColor="@color/white"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Featured"
-                android:background="@color/red"
-                android:textColor="@color/white"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hot"
-                android:paddingRight="10dp"
-                android:paddingLeft="10dp"
-                android:textColor="@color/white"
-                android:background="@color/red"
-                android:layout_marginRight="10dp"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Games"
-                android:layout_marginRight="10dp"
-                android:background="@color/red"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:textColor="@color/white"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tokoh"
-                android:textColor="@color/white"
-                android:background="@color/red"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:layout_marginRight="10dp"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tempat Wisata"
-                android:background="@color/red"
-                android:textColor="@color/white"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:id="@+id/button2"
-                android:layout_marginRight="10dp"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kerajinan Tangan"
-                android:background="@color/red"
-                android:textColor="@color/white"
-                android:paddingRight="10dp"
-                android:id="@+id/button3"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="10dp"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kuliner"
-                android:background="@color/red"
-                android:textColor="@color/white"
-                android:paddingRight="10dp"
-                android:id="@+id/button4"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="10dp"
-                android:visibility="visible" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Flora/Fauna"
-                android:background="@color/red"
-                android:textColor="@color/white"
-                android:paddingRight="10dp"
-                android:id="@+id/button5"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="10dp"
-                android:visibility="visible" />
-
-        </LinearLayout>
-    </HorizontalScrollView>
-
-    <com.huewu.pla.lib.MultiColumnListView
-        xmlns:pla="http://schemas.android.com/apk/res-auto"
-        android:id="@android:id/list"
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:choiceMode="none"
-        android:clickable="false"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        android:fadingEdge="none"
-        android:focusable="false"
-        android:focusableInTouchMode="false"
-        android:scrollingCache="false"
-        android:smoothScrollbar="false"
-        pla:plaColumnNumber="2"
-        pla:plaLandscapeColumnNumber="2"
-        android:layout_marginTop="10dp" />
+        android:background="@color/wallet_bright_foreground_holo_dark">
+
+        <com.huewu.pla.lib.MultiColumnListView
+            xmlns:pla="http://schemas.android.com/apk/res-auto"
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:choiceMode="none"
+            android:clickable="false"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fadingEdge="none"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:scrollingCache="false"
+            android:smoothScrollbar="false"
+            pla:plaColumnNumber="2"
+            pla:plaLandscapeColumnNumber="2"
+            android:layout_marginTop="10dp"
+            android:background="#EEE" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 
 </LinearLayout>

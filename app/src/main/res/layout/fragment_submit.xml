@@ -7,9 +7,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/red"
+        android:background="@color/wallet_bright_foreground_holo_dark"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="visible"
+        android:minHeight="1100dp">
 
         <LinearLayout
             android:id="@+id/about_fragment_info"
@@ -38,42 +39,43 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textAlignment="center"
                 android:gravity="center_vertical|center"
                 android:text="asduyadsguyadgasbdiasdbiuasdiuashdiabsdusbdi dasgiasd iasd uihaduihasiud hia hdsiu hasdi "
                 android:visibility="visible"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp" />
+                android:layout_marginRight="10dp"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/about_fragment_blog_mail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textAlignment="center"
                 android:text="adasdasdasdasdasdasdasdsad asdasd asd asd as"
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/about_fragment_blog_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textAlignment="center"
                 android:gravity="center"
                 android:text="dkjashdiusa iuadh iuadhiuhad iu ahdiha diu hiuasd i hdashdihasuiihasdi adsh"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:textColor="#000000" />
+
         </LinearLayout>
 
         <RelativeLayout
@@ -87,60 +89,222 @@
             android:layout_below="@+id/about_fragment_info"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:visibility="visible">
+            android:visibility="gone">
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/judul"
-                android:hint="Air terjun, bukit, dll.."
-                android:layout_below="@+id/limit1"
-                android:layout_marginTop="10dp"
-                android:layout_alignRight="@+id/limit3"
-                android:layout_alignEnd="@+id/limit3"
-                android:layout_alignLeft="@+id/limit3"
-                android:layout_alignStart="@+id/limit3"
-                android:visibility="visible" />
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/text_uri"
+                android:visibility="gone" />
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:ems="10"
-                android:id="@+id/desc"
-                android:lines="5"
-                android:layout_below="@+id/textView5"
-                android:hint="Ulasanmu..."
-                android:layout_marginTop="10dp"
-                android:visibility="visible"
-                android:layout_alignLeft="@+id/limit2"
-                android:layout_alignStart="@+id/limit2"
-                android:layout_alignRight="@+id/limit3"
-                android:layout_alignEnd="@+id/limit3" />
-
-            <View
-                android:id="@+id/limit4"
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/green"
-                android:layout_below="@+id/textView6"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/text_uri1"
                 android:visibility="visible" />
 
-            <EditText
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/fra_single_recipe_prep_time"
-                android:layout_below="@+id/textView6"
-                android:layout_alignRight="@+id/desc"
-                android:layout_alignEnd="@+id/desc"
-                android:layout_alignLeft="@+id/desc"
-                android:layout_alignStart="@+id/desc"
-                android:hint="Dhiky, Kyald, dst.."
-                android:layout_marginTop="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/text_uri2"
                 android:visibility="visible" />
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/about_fragment_dilimiter_below_social"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/about_fragment_social"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#000000"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/about_fragment_version_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center_horizontal"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:text="\@Onsight - Indonesia"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="205dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/about_fragment_info"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:id="@+id/relativeLayout7">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/shadow_11919"
+                android:id="@+id/relativeLayout5"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <View
+                    android:id="@+id/limitjudul"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#000000"
+                    android:visibility="visible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/namatempat"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/judul"
+                    android:hint="Air terjun, bukit, dll.."
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Nama Tempat"
+                    android:id="@+id/namatempat"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/judul"
+                    android:layout_alignStart="@+id/judul"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/shadow_11919"
+                android:layout_below="@+id/relativeLayout5"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/relativeLayout8">
+
+                <View
+                    android:id="@+id/limitlokasi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#000000"
+                    android:visibility="visible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/lokasitext"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cat"
+                    android:hint="kuningan - jawabarat"
+                    android:visibility="visible"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Lokasi / Alamat"
+                    android:id="@+id/lokasitext"
+                    android:textColor="#000000"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/cat"
+                    android:layout_alignStart="@+id/cat"
+                    android:layout_marginTop="15dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/shadow_11919"
+                android:id="@+id/review"
+                android:layout_below="@+id/relativeLayout8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <View
+                    android:id="@+id/limitreview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#000000"
+                    android:visibility="visible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/reviewtext"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/desc"
+                    android:lines="5"
+                    android:hint="Lokasi ini sangat...."
+                    android:visibility="visible"
+                    android:layout_below="@+id/limitreview"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_margin="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Review kamu"
+                    android:id="@+id/reviewtext"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/limitreview"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000" />
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -148,112 +312,90 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Silahkan isi form dibawah ini"
                 android:id="@+id/textView2"
+                android:visibility="visible"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:textColor="@color/red"
-                android:visibility="visible" />
+                android:layout_marginTop="18dp"
+                android:textColor="#000000" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@drawable/shadow_11919"
+            android:id="@+id/relativeLayout6"
+            android:layout_below="@+id/relativeLayout7"
+            android:layout_toRightOf="@+id/about_fragment_social"
+            android:layout_toEndOf="@+id/about_fragment_social">
 
             <View
-                android:id="@+id/limit3"
+                android:id="@+id/limitnamakamu"
                 android:layout_width="fill_parent"
                 android:layout_height="0.5dp"
-                android:background="@color/red"
-                android:layout_below="@+id/textView5"
-                android:layout_centerHorizontal="true"
-                android:layout_marginRight="60dp"
-                android:layout_marginLeft="60dp"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Nama Tempat Wisata"
-                android:id="@+id/textView3"
-                android:textColor="@color/red"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="29dp"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Deskripsi"
-                android:id="@+id/textView5"
-                android:textColor="@color/red"
-                android:layout_below="@+id/cat"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="33dp"
-                android:visibility="visible" />
-
-            <View
-                android:id="@+id/limit2"
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/green"
+                android:background="#000000"
                 android:visibility="visible"
-                android:layout_alignLeft="@+id/judul"
-                android:layout_alignStart="@+id/judul"
-                android:layout_below="@+id/textView4"
-                android:layout_alignRight="@+id/judul"
-                android:layout_alignEnd="@+id/judul" />
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/namakamutext"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp" />
 
-
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fra_single_recipe_prep_time"
+                android:hint="Dhiky, Kyald, Aika..."
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:text="Nama Kamu"
-                android:id="@+id/textView6"
-                android:layout_below="@+id/desc"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:textColor="@color/red"
-                android:layout_marginBottom="10dp"
-                android:visibility="visible" />
+                android:id="@+id/namakamutext"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/limitnamakamu"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+        </RelativeLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                android:id="@+id/button"
-                android:layout_below="@+id/btnFile2"
-                android:layout_marginTop="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:visibility="visible" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow_11919"
+            android:id="@+id/relativeLayout9"
+            android:layout_below="@+id/relativeLayout6"
+            android:layout_toRightOf="@+id/about_fragment_social"
+            android:layout_toEndOf="@+id/about_fragment_social">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tambah gambar"
                 android:id="@+id/btnFile"
-                android:layout_below="@+id/fra_single_recipe_prep_time"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="20dp"
                 android:background="@color/red"
                 android:textColor="@color/white"
-                android:layout_toLeftOf="@+id/textView5"
-                android:layout_toStartOf="@+id/textView5"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:visibility="visible" />
-            <View
-                android:id="@+id/limit1"
-                android:layout_width="fill_parent"
-                android:layout_height="0.5dp"
-                android:background="@color/green"
-                android:layout_below="@+id/textView3"
-                android:layout_alignRight="@+id/judul"
-                android:layout_alignEnd="@+id/judul"
                 android:visibility="visible"
+                android:layout_below="@+id/limit2"
                 android:layout_alignLeft="@+id/limit2"
-                android:layout_alignStart="@+id/limit2" />
+                android:layout_marginTop="10dp"
+                android:padding="5dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -263,22 +405,51 @@
                 android:textColor="@color/about_txt_color"
                 android:textSize="12dp"
                 android:visibility="visible"
+                android:layout_alignRight="@+id/real_uri1"
+                android:layout_alignEnd="@+id/real_uri1"
                 android:layout_alignTop="@+id/btnFile"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
                 android:layout_toRightOf="@+id/btnFile"
                 android:layout_toEndOf="@+id/btnFile"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+            <View
+                android:id="@+id/limit2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#000000"
+                android:visibility="visible"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textfoto"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/text_uri"
-                android:layout_alignBottom="@+id/btnFile"
-                android:layout_alignLeft="@+id/real_uri"
-                android:layout_alignStart="@+id/real_uri"
-                android:visibility="gone" />
+                android:text="Gambar/Foto"
+                android:id="@+id/textfoto"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000000" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/more"
+                android:padding="10dp"
+                android:background="@color/white"
+                android:layout_below="@+id/btnFile1"
+                android:visibility="invisible"
+                android:layout_alignLeft="@+id/btnFile2"
+                android:layout_alignStart="@+id/btnFile2" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -291,11 +462,45 @@
                 android:paddingBottom="10dp"
                 android:visibility="invisible"
                 android:layout_below="@+id/btnFile"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@+id/real_uri"
-                android:layout_toStartOf="@+id/real_uri"
-                android:layout_marginTop="5dp" />
+                android:layout_marginTop="5dp"
+                android:layout_alignRight="@+id/btnFile"
+                android:layout_alignEnd="@+id/btnFile"
+                android:layout_alignLeft="@+id/imageButton"
+                android:layout_alignStart="@+id/imageButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="no image"
+                android:id="@+id/real_uri1"
+                android:textColor="@color/about_txt_color"
+                android:textSize="12dp"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/btnFile1"
+                android:layout_toRightOf="@+id/btnFile1"
+                android:layout_toEndOf="@+id/btnFile1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="no image"
+                android:id="@+id/real_uri2"
+                android:textColor="@color/about_txt_color"
+                android:textSize="12dp"
+                android:visibility="invisible"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/btnFile2"
+                android:layout_toRightOf="@+id/btnFile2"
+                android:layout_toEndOf="@+id/btnFile2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -308,43 +513,11 @@
                 android:paddingBottom="10dp"
                 android:visibility="invisible"
                 android:layout_below="@+id/btnFile1"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_toLeftOf="@+id/real_uri"
-                android:layout_toStartOf="@+id/real_uri"
-                android:layout_marginTop="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="no image"
-                android:id="@+id/real_uri1"
-                android:textColor="@color/about_txt_color"
-                android:textSize="12dp"
-                android:visibility="gone"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/btnFile1"
-                android:layout_toRightOf="@+id/btnFile1"
-                android:layout_toEndOf="@+id/btnFile1"
-                android:layout_marginLeft="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="no image"
-                android:id="@+id/real_uri2"
-                android:textColor="@color/about_txt_color"
-                android:textSize="12dp"
-                android:visibility="gone"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/btnFile2"
-                android:layout_toRightOf="@+id/btnFile2"
-                android:layout_toEndOf="@+id/btnFile2"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginTop="5dp"
+                android:layout_alignLeft="@+id/btnFile"
+                android:layout_alignStart="@+id/btnFile"
+                android:layout_alignRight="@+id/btnFile"
+                android:layout_alignEnd="@+id/btnFile" />
 
             <ImageButton
                 android:layout_width="wrap_content"
@@ -354,102 +527,27 @@
                 android:padding="10dp"
                 android:background="@color/white"
                 android:layout_alignTop="@+id/btnFile1"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
                 android:layout_above="@+id/btnFile2"
-                android:visibility="visible" />
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton2"
-                android:src="@drawable/more"
-                android:padding="10dp"
-                android:background="@color/white"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/btnFile1"
-                android:visibility="invisible" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/text_uri1"
                 android:visibility="visible"
-                android:layout_toLeftOf="@+id/textView2"
-                android:layout_toStartOf="@+id/textView2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:id="@+id/text_uri2"
-                android:visibility="visible"
-                android:layout_toLeftOf="@+id/textView2"
-                android:layout_toStartOf="@+id/textView2" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Lokasi"
-                android:id="@+id/textView4"
-                android:textColor="@color/red"
-                android:visibility="visible"
-                android:layout_marginTop="24dp"
-                android:layout_below="@+id/judul"
-                android:layout_centerHorizontal="true" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/cat"
-                android:hint="Cikaso, kuningan - Jawa Barat"
-                android:visibility="visible"
-                android:layout_below="@+id/limit2"
-                android:layout_alignLeft="@+id/limit2"
-                android:layout_alignStart="@+id/limit2"
-                android:layout_alignRight="@+id/limit2"
-                android:layout_alignEnd="@+id/limit2"
-                android:layout_marginTop="10dp" />
-
+                android:layout_alignLeft="@+id/btnFile"
+                android:layout_alignStart="@+id/btnFile" />
 
         </RelativeLayout>
 
-        <View
-            android:id="@+id/about_fragment_dilimiter_below_social"
-            android:layout_width="fill_parent"
-            android:layout_height="0.5dp"
-            android:layout_below="@id/about_fragment_social"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/green"
-            android:visibility="visible" />
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="0.5dp"
-            android:layout_above="@id/about_fragment_social"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/green"
-            android:paddingTop="20dp"
-            android:visibility="visible" />
-
-        <TextView
-            android:id="@+id/about_fragment_version_tv"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom|center_horizontal"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:text="\@Onsight - Indonesia"
-            android:textSize="12sp"
-            android:layout_below="@+id/about_fragment_social"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Submit"
+            android:id="@+id/button"
+            android:visibility="visible"
+            android:layout_below="@+id/relativeLayout9"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:visibility="visible" />
+            android:background="#FF0000"
+            android:textColor="@color/white" />
+
     </RelativeLayout>
 
 </ScrollView>
